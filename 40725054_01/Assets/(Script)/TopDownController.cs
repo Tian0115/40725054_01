@@ -13,7 +13,7 @@ using UnityEngine;
         private float speed = 5f;
         private string parameterRun = "walk";
         //private string parameterDead = "dead";
-        private string parameterFire = "fire";
+        //private string parameterFire = "fire";
         private Animator ani;
         private Rigidbody2D rig;
         private float h;
@@ -51,7 +51,7 @@ using UnityEngine;
             rig.velocity = new Vector2(h, v) * speed;
 
             ani.SetBool(parameterRun, h != 0 || v != 0);
-            ani.SetBool(parameterFire, h != 0);
+            //ani.SetBool(parameterFire, h != 0);
 
             #region 三元運算
             //三元運算
@@ -62,6 +62,7 @@ using UnityEngine;
             #endregion
 
             transform.eulerAngles = new Vector3(0, h >= 0 ? 0 : 180, 0);
+            
 
         }
 

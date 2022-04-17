@@ -34,12 +34,14 @@ namespace Tian
         [Header("子彈射程"), Range(0, 10)]
         public float bulletsTime;
 
+
         /* 說明
         資料類型[]  陣列  -  資料結構
         作用：儲存多筆相同類型的資料
         */
         [Header("生成位置")]
         public Vector3[] v3SpawnPoint;
+
         [Header("武器預製物")]
         public GameObject goWeapon;
         [Header("飛行方向")]

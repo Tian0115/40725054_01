@@ -56,6 +56,7 @@ namespace Tian
             Physics2D.IgnoreLayerCollision(3, 6);
             Physics2D.IgnoreLayerCollision(6, 6);
             Physics2D.IgnoreLayerCollision(6, 7);
+
         }
         private void Awake()
         {
@@ -82,17 +83,18 @@ namespace Tian
             // Time.deltaTime 一個影格的時間
             timer += Time.deltaTime;
 
-            print("經過的時間：" + timer);
+            //print("經過的時間：" + timer);
 
             //如果計時器 大於等於 間格時間  就生成  武器
 
             if (timer >= dataWeapon.interval)
             {
-                print("生成武器");
+                //print("生成武器");
                 // 隨機值 = 隨機.範圍 (最小值，最大值)  -  整數不包含最大值
                 int random = Random.Range(0, dataWeapon.v3SpawnPoint.Length);
                 // 座標
                 Vector3 pos = transform.position + dataWeapon.v3SpawnPoint[random];
+
                 //Quaternion 四位元：紀錄角度資訊類型
                 //Quaternion.identity 零角度( 0, 0, 0)
                 //生成(物件，座標，角度)
@@ -108,6 +110,7 @@ namespace Tian
             {
                 ani.SetBool(paraneterFire, false);
             }
+
         }
         private void Fire()
         {
@@ -116,6 +119,7 @@ namespace Tian
                 SpawnWeapon();
             }
         }
+
     }
 }
 
