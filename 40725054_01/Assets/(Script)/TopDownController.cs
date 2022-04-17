@@ -12,7 +12,7 @@ using UnityEngine;
         [SerializeField, Header("²¾°Ê³t«×"), Range(0, 100)]
         private float speed = 10.5f;
         private string parameterRun = "walk";
-        private string parameterDead = "dead";
+        //private string parameterDead = "dead";
         private Animator ani;
         private Rigidbody2D rig;
         private float h;

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Tian
 {
-    /* Data
+    /* Data說明
      武器資料
     1.飛行速度
     2.攻擊力
@@ -29,6 +29,11 @@ namespace Tian
         public int countMax = 25;
         [Header("間隔時間"), Range(0, 3)]
         public float interval = 1.2f;
+
+        /* 說明
+        資料類型[]  陣列  -  資料結構
+        作用：儲存多筆相同類型的資料
+        */
         [Header("生成位置")]
         public Vector3[] v3SpawnPoint;
     }
