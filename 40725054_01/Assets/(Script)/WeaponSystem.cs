@@ -15,6 +15,11 @@ namespace Tian
     {
         [SerializeField, Header("武器資料")]
         private DataWeapon dataWeapon;
+        private Animator ani;
+        private string paraneterFire = "Fire";
+
+
+
 
 
         //計時器
@@ -45,9 +50,22 @@ namespace Tian
 
         }
 
+        private void Start()
+        {
+            //2D 物理  忽略圖層碰撞 (圖層編號，圖層編號)
+            Physics2D.IgnoreLayerCollision(3, 6);
+            Physics2D.IgnoreLayerCollision(6, 6);
+            Physics2D.IgnoreLayerCollision(6, 7);
+        }
+        private void Awake()
+        {
+            ani = GetComponent<Animator>();
+        }
+
         private void Update()
         {
             SpawnWeapon();
+            //Fire();
         }
         /*  Description
          生成武器
@@ -64,17 +82,40 @@ namespace Tian
             // Time.deltaTime 一個影格的時間
             timer += Time.deltaTime;
 
-            //print("經過的時間：" + timer);
+            print("經過的時間：" + timer);
 
             //如果計時器 大於等於 間格時間  就生成  武器
 
             if (timer >= dataWeapon.interval)
             {
                 print("生成武器");
+                // 隨機值 = 隨機.範圍 (最小值，最大值)  -  整數不包含最大值
+                int random = Random.Range(0, dataWeapon.v3SpawnPoint.Length);
+                // 座標
+                Vector3 pos = transform.position + dataWeapon.v3SpawnPoint[random];
+                //Quaternion 四位元：紀錄角度資訊類型
+                //Quaternion.identity 零角度( 0, 0, 0)
+                //生成(物件，座標，角度)
+                GameObject temp = Instantiate(dataWeapon.goWeapon, pos, Quaternion.identity);
                 timer = 0;
+
+                // 暫存武器 . 取得元件<剛體>().添加推力 (方向 * 速度)
+                temp.GetComponent<Rigidbody2D>().AddForce(dataWeapon.v3Direction * dataWeapon.speed);
+                ani.SetBool(paraneterFire, true);
+                Destroy(temp, dataWeapon.bulletsTime);
+
+            } else if ( timer <= dataWeapon.interval)
+            {
+                ani.SetBool(paraneterFire, false);
             }
         }
-
+        private void Fire()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                SpawnWeapon();
+            }
+        }
     }
 }
 

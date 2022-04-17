@@ -10,14 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca616b6ed06d3a24e9788c0c95ff9d67, type: 3}
-  m_Name: FastBullet
+  m_Name: StandardBullets
   m_EditorClassIdentifier: 
-  speed: 700
-  attack: 7
-  countStart: 25
-  countMax: 60
-  interval: 0.75
+  speed: 100
+  attack: 8
+  countStart: 15
+  countMax: 30
+  interval: 1
+  bulletsTime: 3.2
   v3SpawnPoint:
   - {x: 0.14, y: -0.08, z: 0}
   - {x: 0.16, y: -0.1, z: 0}
   - {x: 0.15, y: -0.05, z: 0}
+  goWeapon: {fileID: 6381234835813972557, guid: 324b882ba9595f446a874049f6cac41b, type: 3}
+  v3Direction: {x: 1, y: 0, z: 0}

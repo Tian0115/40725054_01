@@ -3123,7 +3123,7 @@ GameObject:
   - component: {fileID: 286309362}
   - component: {fileID: 286309361}
   - component: {fileID: 286309360}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Area R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3768,7 +3768,7 @@ GameObject:
   - component: {fileID: 1281128071}
   - component: {fileID: 1281128070}
   - component: {fileID: 1281128069}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Area L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3902,7 +3902,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.0000038146973, y: -30.2}
+  m_AnchoredPosition: {x: -0.0000038146973, y: -30.199951}
   m_SizeDelta: {x: 292.4774, y: 54.8395}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1475189126
@@ -3992,7 +3992,7 @@ GameObject:
   - component: {fileID: 1476185368}
   - component: {fileID: 1476185367}
   - component: {fileID: 1476185370}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28437,7 +28437,7 @@ GameObject:
   - component: {fileID: 1580139487}
   - component: {fileID: 1580139486}
   - component: {fileID: 1580139485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Area U
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28546,7 +28546,7 @@ GameObject:
   - component: {fileID: 1610293430}
   - component: {fileID: 1610293429}
   - component: {fileID: 1610293428}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Area D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28994,7 +28994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 408, y: -31.3}
+  m_AnchoredPosition: {x: 408, y: -31.300049}
   m_SizeDelta: {x: 96.65747, y: 54.8395}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2023634390

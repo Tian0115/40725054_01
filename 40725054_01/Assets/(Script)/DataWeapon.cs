@@ -10,6 +10,8 @@ namespace Tian
     4.最大數量
     5.間隔時間
     6.生成位置
+    7.武器預製物
+    8.飛行方向
     //ScriptableObject 腳本化物件
     //作用：將腳本的資料變成物件儲存於 Project 內 (擴充和維護性佳)
     //CreateAssetMenu 與 ScriptableObject 搭配使用
@@ -29,6 +31,8 @@ namespace Tian
         public int countMax = 25;
         [Header("間隔時間"), Range(0, 3)]
         public float interval = 1.2f;
+        [Header("子彈射程"), Range(0, 10)]
+        public float bulletsTime;
 
         /* 說明
         資料類型[]  陣列  -  資料結構
@@ -36,6 +40,11 @@ namespace Tian
         */
         [Header("生成位置")]
         public Vector3[] v3SpawnPoint;
+        [Header("武器預製物")]
+        public GameObject goWeapon;
+        [Header("飛行方向")]
+        public Vector3 v3Direction;
+
     }
 
 }

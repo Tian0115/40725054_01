@@ -10,13 +10,16 @@ using UnityEngine;
         #region 資料：保存系統需要的基本資料：移動速度、動畫參數名稱與元件等
         //
         [SerializeField, Header("移動速度"), Range(0, 100)]
-        private float speed = 10.5f;
+        private float speed = 5f;
         private string parameterRun = "walk";
         //private string parameterDead = "dead";
+        private string parameterFire = "fire";
         private Animator ani;
         private Rigidbody2D rig;
         private float h;
         private float v;
+
+        private WeaponSystem weaponSystem;
 
         #endregion
 
@@ -26,11 +29,13 @@ using UnityEngine;
         {
             ani = GetComponent<Animator>();
             rig = GetComponent<Rigidbody2D>();
+
         }
         private void Update()
         {
             GetInput();
             Move();
+
         }
 
         #endregion
@@ -46,6 +51,7 @@ using UnityEngine;
             rig.velocity = new Vector2(h, v) * speed;
 
             ani.SetBool(parameterRun, h != 0 || v != 0);
+            ani.SetBool(parameterFire, h != 0);
 
             #region 三元運算
             //三元運算
@@ -56,7 +62,10 @@ using UnityEngine;
             #endregion
 
             transform.eulerAngles = new Vector3(0, h >= 0 ? 0 : 180, 0);
+
         }
+
+
         #endregion
     }
 }
