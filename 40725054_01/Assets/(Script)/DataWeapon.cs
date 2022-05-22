@@ -18,7 +18,7 @@ namespace Tian
     //作用：在Project 建立此腳本化物件的選單與檔案名稱
     //menuName 選單名稱、fileName 檔案名稱
      */
-    [CreateAssetMenu(menuName = "Tian/Data Weapon", fileName = "Data Weapon")]
+    [CreateAssetMenu(menuName = "Tian/Data Weapon", fileName = "Data Weapon", order = 1)]
     public class DataWeapon : ScriptableObject
     {
         [Header("飛行速度"), Range(0, 5000)]

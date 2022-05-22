@@ -18,7 +18,8 @@ namespace Tian
         private Animator ani;
         private string paraneterFire = "Fire";
 
-
+        /*[SerializeField, Header("武器刪除時間"), Range(0, 10)]
+        public float destoryWeaponTime = 3;*/
 
 
 
@@ -56,6 +57,7 @@ namespace Tian
             Physics2D.IgnoreLayerCollision(3, 6);
             Physics2D.IgnoreLayerCollision(6, 6);
             Physics2D.IgnoreLayerCollision(6, 7);
+
 
         }
         private void Awake()
@@ -104,8 +106,12 @@ namespace Tian
                 // 暫存武器 . 取得元件<剛體>().添加推力 (方向 * 速度)
                 temp.GetComponent<Rigidbody2D>().AddForce(dataWeapon.v3Direction * dataWeapon.speed);
                 ani.SetBool(paraneterFire, true);
+
+                //刪除物件(要刪除的物件，延遲刪除時間)
                 Destroy(temp, dataWeapon.bulletsTime);
 
+                //取得武器、攻擊力 = 武器資料、攻擊力
+                temp.GetComponent<Weapon>().attack = dataWeapon.attack;
             } else if ( timer <= dataWeapon.interval)
             {
                 ani.SetBool(paraneterFire, false);
