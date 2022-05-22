@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: StandardBullets
   m_EditorClassIdentifier: 
   speed: 100
-  attack: 50
+  attack: 8
   countStart: 15
   countMax: 30
   interval: 0.94000006

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ad3c262cabec1448aa48658e5d1c06, type: 3}
   m_Name: BlueCowBoy
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2.8
   attack: 10
   cd: 3.5
-  hP: 40
+  hP: 20
   expDropProbability: 0.8
   typeExp: 0
   stopDistance: 0.6
